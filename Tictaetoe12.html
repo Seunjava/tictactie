@@ -7,36 +7,47 @@
     <title>Document</title>
 </head>
 <body >
-  <div style="background-color: black;margin: 60px 350px; color: white;" >
+  <div style="background-color: black;margin: 60px 500px; color: white;border-radius: 15px;" >
 <!-- <button id="myBtn">Try it</button> -->
 <!-- <p id="demo"></p> -->
-<p id="winner"></p>
-<button onclick="myFunction()">Try It</button>
+<span style="margin-left: 70px;font-size: 25px;margin-bottom: 15px;margin-top: 50px;">TicTacToe Game</span>
+<p id="winner" style="margin-top: 30px;"></p>
 <p id="randomnumber"></p>
 
-    <label for="">Players</label> <input id="f" onload="Players()" value="x" style="padding: 20px;"></input>    
-    <input id="g" value="O" style="padding: 20px;"></input>  <br>
+    <label for="" style="margin-left: 15px;">Player1</label> <input id="f" onload="Players()" value="x" style="padding: 10px;margin-top: 20px;"><br>
+</input>    
+<label for="" style="margin-left: 15px;">Player2</label><input id="g" value="O" style="padding: 10px;"></input> <br>
+<button style="padding: 15px;margin-left: 65px;margin-top: 6px;" onclick="myFunction()">Start Game</button>
+
+<br>
 
 
-    <button id="b1" style="padding: 30px;" onclick="Game(event)">1</button>
+    <button id="b1" style="padding: 30px;margin-left: 45px;margin-top: 30px;" onclick="Game(event)">1</button>
     
     <button id="b2" style="padding: 30px;" onclick="Game(event)">2</button>
     
     <button id="b3" style="padding: 30px;" onclick="Game(event)">3</button>
     <br>
 
-    <button  style="padding: 30px;" onclick="Game(event)">4</button>
+    <button  style="padding: 30px;margin-left: 45px;" onclick="Game(event)">4</button>
     
     <button style="padding: 30px;" onclick="Game(event)">5</button>
     
    <button style="padding: 30px;" onclick="Game(event)">6</button>
     <br>
-    <button style="padding: 30px;" onclick="Game(event)">7</button>
+    <button style="padding: 30px;margin-left: 45px;margin-bottom: 39px;" onclick="Game(event)">7</button>
     
     <button style="padding: 30px;" onclick="Game(event)">8</button>
     
     <button style="padding: 30px;" onclick="Game(event)">9</button>
     <br>
+    <button style="padding: 15px;margin-left: 75px;" onclick="myFunction()">Continue</button>
+
+    <p style="margin-left: 80px;font-size: 20px;">Scores</p> <span style="margin-left: 25px;">Player 1</span>    <input style="padding: 10px; margin-left: 10px;" type="text">
+    <br>
+    <span style="margin-left: 25px;">Player 2</span> 
+    <input style="padding: 10px; margin-left: 10px;margin-bottom: 20px;" type="text">
+
   </div>
 
     
