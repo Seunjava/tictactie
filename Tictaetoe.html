@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button id="myBtn">Try it</button> -->
+<!-- <p id="demo"></p> -->
+
+<button onclick="myFunction()">Try It</button>
+<p id="randomnumber"></p>
+
+    <label for="">Players</label> <input id="F" onload="Players()" value="x" style="padding: 20px;"></input>    
+    <input id="G" value="O" style="padding: 20px;"></input>  <br>
+
+
+    <button id="b1" style="padding: 30px;" onclick="Game(event)">1</button>
+    
+    <button id="b2" style="padding: 30px;" onclick="Game(event)">2</button>
+    
+    <button id="b3" style="padding: 30px;" onclick="Game(event)">3</button>
+    <br>
+
+    <button id="b4" style="padding: 30px;" onclick="Game(event)">4</button>
+    
+    <button id="b5" style="padding: 30px;" onclick="Game(event)">5</button>
+    
+   <button id="b6" style="padding: 30px;" onclick="Game(event)">6</button>
+    <br>
+    <button id="b7" style="padding: 30px;" onclick="Game(event)">7</button>
+    
+    <button id="b8" style="padding: 30px;" onclick="Game(event)">8</button>
+    
+    <button id="b9" style="padding: 30px;" onclick="Game(event)">9</button>
+    <br>
+<script type="text/javascript">
+// const Players=()=>{
+//     var a="player1";
+//     var b="player2";
+//     if (a==="player1") {
+//         f.value=a;
+        
+//     }
+// }
+
+// function red(){
+//     a=f.value;
+//     b=g.value;
+//     // myFunction();
+//     alert(a)
+//     alert(b)
+
+// }
+  function myFunction() {
+    // document.getElementById("randomnumber").innerHTML = Math.random();
+    //     return Math.floor(Math.random() * (max - min + 1)) + min;
+
+    document.getElementById("randomnumber").innerHTML = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+if (randomnumber.innerHTML=="1") {
+    alert("player 1")
+    
+}
+else {
+    alert("player2");
+} 
+    
+    alert(randomnumber.innerHTML)
+  }
+
+
+//   function getRndInteger(min, max)
+//    {
+    // var a=f.value;
+    // var b=g.value;
+    //     demo.innerHTML= getRndInteger(1,2); 
+    // if (  && a===f.value) {
+        
+    // }
+
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
+const Game=e=>{
+// red();
+// var c=0;
+// myFunction();
+
+// c=randomnumber.innerHTML;
+// var c=randomnumber.innerHTML;
+// alert("Player=" +c)
+// if (c==="1"){
+    e.target.innerText=f.value;
+    e.target.id.disabled=true;  
+    alert("value="+ e.target.innerText)
+
+//  }
+    
+}
+</script>
+</body>
+</html>

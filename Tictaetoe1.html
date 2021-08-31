@@ -1,0 +1,233 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: white;">
+
+    <!-- <button id="myBtn">Try it</button> -->
+<!-- <p id="demo"></p> -->
+<p id="winner"></p>
+<button onclick="myFunction()">Try It</button>
+<p id="randomnumber"></p>
+
+    <label for="">Players</label> <input id="f" onload="Players()" value="x" style="padding: 20px;"></input>    
+    <input id="g" value="O" style="padding: 20px;"></input>  <br>
+
+
+    <button id="b1" style="padding: 30px;" onclick="Game(event)">1</button>
+    
+    <button id="b2" style="padding: 30px;" onclick="Game(event)">2</button>
+    
+    <button id="b3" style="padding: 30px;" onclick="Game(event)">3</button>
+    <br>
+
+    <button  style="padding: 30px;" onclick="Game(event)">4</button>
+    
+    <button style="padding: 30px;" onclick="Game(event)">5</button>
+    
+   <button style="padding: 30px;" onclick="Game(event)">6</button>
+    <br>
+    <button style="padding: 30px;" onclick="Game(event)">7</button>
+    
+    <button style="padding: 30px;" onclick="Game(event)">8</button>
+    
+    <button style="padding: 30px;" onclick="Game(event)">9</button>
+    <br>
+<script type="text/javascript">
+    var a=f.value;
+     var b=g.value;
+     var c=0;
+     let winner=document.getElementById("winner");
+     let Players=["player 1","player 2"];
+     let controllers=["controller1","controller2"];
+    //  alert(a);
+
+
+     
+//   function myFunction() {
+//     // document.getElementById("randomnumber").innerHTML = Math.random();
+//     //     return Math.floor(Math.random() * (max - min + 1)) + min;
+
+//     document.getElementById("randomnumber").innerHTML = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+// if (randomnumber.innerHTML=="1") {
+//     alert("player 1")
+    
+// }
+// else {
+//     alert("player2");
+// } 
+    
+    // alert(randomnumber.innerHTML)
+//   }
+
+//  const Game=e=>{
+//      myFunction();
+//      c=randomnumber.innerHTML;
+//      if (c==="1") {
+//         e.target.innerText=f.value;
+//         e.target.button.index.style.transform = "scale(2.5)";
+//         e.target.button.index.style.transform = "scale(4.5)";
+
+
+
+//      }
+//      else      {
+//         e.target.innerText=g.value;
+//         e.target.g.style.transform = "scale(2.5)";
+//         e.target.button.index.style.transform = "scale(4.5)";
+
+
+//     }
+   
+// }
+
+
+// function randomUniqueNum(range, outputCount) {
+
+// let arr = []
+// for (let i = 1; i <= range; i++) {
+//   arr.push(i)
+// }
+
+// let result = [];
+// alert(result);
+
+// for (let i = 1; i <= outputCount; i++) {
+//   const random = Math.floor(Math.random() * (range - i));
+//   result.push(arr[random]);
+//   arr[random] = arr[range - i];
+// }
+
+// return result;
+// alert(result);
+// }
+// f.value=randomUniqueNum(2, 1);
+
+const generateRandomNumber = (min, max) =>  {
+return Math.floor(Math.random() * (max - min) + min);
+  };
+alert(generateRandomNumber(1, 2));
+if (generateRandomNumber(1, 2)==1) {
+    alert("results")
+    alert(Math.floor(Math.random() * 2) + 1);
+    alert(Math.floor(Math.random() * (2 - 1 + 1)) + 1);
+    let player1=Math.floor(Math.random()*2);
+    var player2=Math.floor(Math.random()*2);
+    let controller1=Math.floor(Math.random()*controllers.length);
+let controller2=1-controller1;
+alert("controller1="+controller1);
+alert("controller2="+controller1);
+
+while(player1==player2){
+   player2=Math.floor(Math.random()*2);
+
+}
+alert("P1="+player1);
+alert("P2="+player2);
+
+
+} else {
+    alert("changed")
+}
+const Game=e=>{
+  var min=Math.ceil(1);
+    var max=Math.floor(2); 
+    var    count=0;
+    player1=min;
+    player2=max;
+
+    
+    var random=Math.floor(Math.random() * (max - min +1)) + min;
+  // var random=Math.floor(Math.random() * (max - min) + min);
+    // var random = Math.round(Math.random() * (+max - +min) + +min);
+    alert("Random Number Generated : " + random ); 
+  
+    if (random>=1.5 & player2<=max) {
+      e.target.innerText=f.value;
+    e.target.button.id.disabled=true; 
+ 
+    }
+    else{
+      player1<=1.5;
+      e.target.innerText=g.value;
+    e.target.button.id.disabled=true; 
+    ; 
+ 
+    }
+    count++;
+   alert(count);
+if (count==9) {
+  e.target.button.id.disabled=true; 
+
+} else {
+alert("start again")  
+}
+
+}
+
+  //  using array
+// const Game=e=>{ 
+//   const arr = [1, 2];
+// const rotatedArr = arr.map((e, i) => arr[arr.length-i-1])
+// console.log(rotatedArr);
+// var Players=arr.length;
+// alert("F="+Players)
+// console.log("Player 1=" +arr[0]);
+// console.log("Player 2=" +arr[1]);
+// a=arr[0];
+// b=arr[1];
+// for (let i = 0; i < Players; i++) {
+//   alert("Items" +arr[i]);
+//   player1=arr[0];
+
+//   if(player1=arr[0]){
+//     e.target.innerText=f.value;
+//     e.target.id.disabled=true; 
+//     // Players=arr[0]; 
+//     player1=arr[1];
+
+//   }
+//   else {
+//     Players=arr[0]; 
+//     e.target.innerText=g.value;
+//     e.target.id.disabled=true;  
+
+//   }
+// }
+// if (a==arr[0] && b==arr[1]) {
+//     e.target.innerText=f.value;
+//         // e.target.button.index.style.transform = "scale(2.5)";
+//         // e.target.button.index.style.transform = "scale(4.5)";
+//                  e.target.id.disabled=true;  
+//                 //  Players=arr[1];
+//                  alert("L="+Players);
+
+// }
+    
+// else       {
+
+//         e.target.innerText=g.value;
+//         // e.target.g.style.transform = "scale(2.5)";
+//         // e.target.button.index.style.transform = "scale(4.5)";
+//          e.target.id.disabled=true;  
+
+
+//     } 
+
+
+ 
+ 
+        //  e.target.id.disabled=true;  
+         
+
+    // e.target.innerText=f.value;
+// }
+    // array stops here
+
+</script>
+</body>
+</html>
